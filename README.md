@@ -51,7 +51,7 @@ curl http://localhost:8080/customer/1 \
 - The ID is verified and can't be null, empty (except for the POST method to /customer) or a special character. If so, the API will return a 400 code (bad request) and a message.
 - When adding a customer to the system, some validations are run prior to adding the customer. For example, all fields are required and the birthdate of the customer can't be after the actual date or have a different format that the one indicated before. Besides that, the email is verified so it won't accept invalid email addresses.
 - If a customer is not found on the system, a 404 code (not found) and a message are going to be returned.
-- It's a small project and it can have more and better validations. If you have one in mind, I'll be happy to hear from you :).
+- It's a small project and it can have more and better validations. If you have one in mind, I'll be happy to hear from you.
 
 
 ### I'll really hope that you have fun :)
