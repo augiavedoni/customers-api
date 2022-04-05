@@ -26,10 +26,24 @@ If everything went well, you'll have the API running on your machine on the port
 
 Using the command `curl http://localhost:8080/{endpoint}` you can interact with the API. The avaible endpoints are the following:
 
-- **POST /customer**: this endpoint expects you to send as the body of the request the information about a customer. The estructure of the model that represents a customer was explained earlier. It returns the customer information that was added to the system.
+- **POST /customer**: this endpoint expects you to send as the body of the request the information about a customer. The estructure of the model that represents a customer was explained earlier. It returns the customer information that was added to the system. For example:
+```
+curl http://localhost:8080/customer \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "POST" \
+    --data '{"id": "1","name": "Some","surname": "Guy", "email": "some.guy@mycoolemail.com", "birthdate": "2000-02-20"}'
+```
 - **GET /customer/id**: this endpoint requires an ID as a parameter. It returns the information about a customer. For example: `curl http://localhost:8080/customer/1`
 - **GET /customers**: it returns the information about all the customers that are present in the system. For example: `curl http://localhost:8080/customers`
-- **PUT /customer/id**: this endpoint requires an ID as a parameter and all the updated information about the customer (all fields are required). It returns the updated information about the customer.
+- **PUT /customer/id**: this endpoint requires an ID as a parameter and all the updated information about the customer (all fields are required). It returns the updated information about the customer. For example:
+```
+curl http://localhost:8080/customer/1 \
+    --include \
+    --header "Content-Type: application/json" \
+    --request "PUT" \
+    --data '{"id": "1","name": "Some","surname": "Guy", "email": "some.guy@mycoolemail.com", "birthdate": "2000-02-20"}'
+```
 - **DELETE /customer/id**: this endpoint requires an ID as a parameter. It returns wheter the customer was deleted from the system or if the customer wasn't found. For example: `curl -X DELETE http://localhost:8080/customer/1`
 
 ### Things to consider:
@@ -40,13 +54,4 @@ Using the command `curl http://localhost:8080/{endpoint}` you can interact with 
 - It's a small project and it can have more and better validations. If you have one in mind, I'll be happy to hear from you :).
 
 
-
-
-
-
-
-
-
-
-
-
+### I'll really hope that you have fun :)
