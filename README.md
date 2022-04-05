@@ -53,5 +53,7 @@ curl http://localhost:8080/customer/1 \
 - If a customer is not found on the system, a 404 code (not found) and a message are going to be returned.
 - It's a small project and it can have more and better validations. If you have one in mind, I'll be happy to hear from you :).
 
+EDIT: this is a new line to verify if the Workflow runs fine.
+
 
 ### I'll really hope that you have fun :)
