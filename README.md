@@ -1,6 +1,4 @@
 # customers-api
-Customer relationship management API required for the CodeSherpas coding assessment. I choose Golang as the lenguage for this project. Hope you like it :)
-
 This API aims to represent the organization of customers information. Each customer is represented as follows:
 
 - ID: string
